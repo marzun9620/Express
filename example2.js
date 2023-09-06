@@ -1,17 +1,12 @@
 const express = require('express');
-const mongoose=require('mongoose');
+const db = require('./connection');
 const cookie=require('cookie-parser');
 const cookieParser = require('cookie-parser');
 const handle=require('./hanlder');
 
 
 
-const DB='mongodb+srv://enamulMarzun:shamsun99@cluster0.aoy5j7e.mongodb.net/marzun?retryWrites=true&w=majority';
-mongoose.connect(DB).then(()=>{
-    console.log('successful');
-}).catch((err)=>{
-    console.log('error');
-});
+
 
 
 const app=express();
